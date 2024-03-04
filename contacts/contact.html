@@ -3,37 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
+    <title>Contact Form</title>
     <style>
-        table,tr,td{
-            border: 1px solid;
-            border-collapse: collapse;
+        body {
+            background-color: #D4CFC9;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        fieldset {
+            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        legend {
+            font-size: 24px;
+            font-weight: bold;
             text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
         }
     </style>
 </head>
-<body bgcolor="darkseagreen">
-    <h3><a href="../index.html">Index</a></h3>
-    <br>
-    <h1>Get In Touch</h1>
-    <br>
-    <table>
-        <tr>
-            <td><img src="phone-removebg-preview.png" width="70"></td>
-            <td><h3>Phone:000000</h3></td>
-        </tr>
-        <tr>
-            <td><img src="whatspp.png" width="40"></td>
-            <td><h3>WhatsApp:00000</h3></td>
-            </tr>
-        <tr>
-            <td><img src="instagram-removebg-preview.png" width="50"></td>
-            <td><h3>Instagram:User Name</h3></td>
-        </tr>
-        <tr>
-            <td><img src="mail-removebg-preview.png" width="50"></td>
-            <td><h3>Mail:<a href="mailto:kalsoomyousafzai20@gmail.com">Kalsoom Yousafzai</a></h3></td>
-        </tr>
-    </table>
+<body>
+ 
+    <form>
+        <fieldset>
+            <legend>Get In Touch</legend>
+            <br><br>
+            First Name: <input type="text" id="firstName" name="firstName" value="First Name">
+            Last Name: <input type="text" id="lastName" name="lastName" value="Last Name">
+            <br><br>
+            Email: <input type="email" id="email" name="email" value="name@example.com">
+            <br><br>
+            Phone: <select id="countryCode" name="countryCode">
+                <option value="+92" selected>Pakistan (+92)</option>
+                <option value="+91">India (+91)</option>
+                <option value="+86">China (+86)</option>
+            </select>
+            <input type="text" id="phoneNumber" name="phoneNumber">
+           
+            <br><br>
+            <input type="submit" value="Send">
+        </fieldset>
+    </form>
 </body>
 </html>
